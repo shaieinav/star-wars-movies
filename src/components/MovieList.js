@@ -20,7 +20,7 @@ const MovieList = () => {
         );
     });
 
-    return <div className="">{renderedList}</div>;
+    return <section className="movie-list">{renderedList}</section>;
 };
 
 export default MovieList;
