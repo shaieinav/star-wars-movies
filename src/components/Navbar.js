@@ -1,10 +1,10 @@
 import { HashRouter as Router, Link, Route, Switch } from 'react-router-dom';
 import Home from './Home';
 import MovieList from "./MovieList";
-import LogoSVG from '../svgs/LogoSVG';
-import SpaceStationMoonSVG from '../svgs/SpaceStationMoonSVG';
-import StarfighterSVG from '../svgs/StarfighterSVG';
-import SpaceshipSVG from '../svgs/SpaceshipSVG';
+import LogoSVG from '../assets/svgs/LogoSVG';
+import SpaceStationMoonSVG from '../assets/svgs/SpaceStationMoonSVG';
+import StarfighterSVG from '../assets/svgs/StarfighterSVG';
+import GithubSVG from '../assets/svgs/GithubSVG';
 
 const Navbar = () => {
     return (
@@ -31,27 +31,22 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to='/movies' className="nav-link">
-                                <SpaceshipSVG />
-                                <span className="link-text">Movies2</span>
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to='/movies' className="nav-link">
-                                <SpaceshipSVG />
+                            <a
+                                href='https://github.com/shaieinav/star-wars-movies'
+                                target='_blank'
+                                rel='noreferrer'
+                                className="nav-link"
+                            >
+                                <GithubSVG />
                                 <span className="link-text">Github</span>
-                            </Link>
+                            </a>
                         </li>
                     </ul>
                 </nav>
 
                 <Switch>
-                    <Route exact path='/'>
-                        <Home />
-                    </Route>
-                    <Route path='/movies'>
-                        <MovieList />
-                    </Route>
+                    <Route exact path='/' component={Home} />
+                    <Route exact path='/movies' component={MovieList} />
                 </Switch>
             </Router>
         </div>

@@ -1,4 +1,4 @@
-import StarWarsLogoSVG from '../svgs/StarWarsLogoSVG';
+import StarWarsLogoSVG from '../assets/svgs/StarWarsLogoSVG';
 
 const Home = () => {
     return (

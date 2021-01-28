@@ -1,9 +1,9 @@
 import React from 'react';
-// import starwarsPoster from '../starwars.jpeg';
+import LikeButton from './LikeButton';
 
 const MovieItem = ({ movie }) => {
     return (
-        <article className="movie">
+        <article id={movie.episode_id} className="movie">
             {/* <img className="movie-poster" src={starwarsPoster} alt=""></img> */}
             <header className="movie-header">
                 <h1>{movie.title}</h1>
@@ -12,6 +12,9 @@ const MovieItem = ({ movie }) => {
                 <h6>{movie.producer}</h6>
             </header>
             {/* <p>{movie.opening_crawl}</p> */}
+            <footer className="like-button-footer">
+                <LikeButton id={movie.episode_id} />
+            </footer>
         </article>
     );
 };

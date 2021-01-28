@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
-/* @import url("starwars.jpeg"); */
+/* @import url("https://fonts.googleapis.com/icon?family=Material+Icons"); */
 
 :root {
     font-size: 16px;
@@ -18,7 +18,7 @@ body {
     padding: 0;
     font-family: "Montserrat", sans-serif;
     color: white;
-    background-image: url('star-wars-background.jpeg');
+    background-image: url('../assets/images/star-wars-background.jpeg');
 }
 
 body::-webkit-scrollbar {
@@ -38,22 +38,77 @@ body::-webkit-scrollbar-thumb {
     flex-wrap: wrap;
 }
 
+.like-button {
+    color: red;
+    fill: white;
+    /* width: 50px;
+    height: 50px; */
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: red;
+    border: none;
+}
+
+.like-button:focus {
+    outline: none;
+}
+
+.like-button svg {
+    width: 50px;
+    height: 50px;
+}
+
+.heart-like-button {
+    fill: violet;
+}
+
+.movie .like-button-footer {
+    align-self: flex-end;
+    margin-top: auto;
+}
+
+.movie:nth-child(1) {
+    background-image: url('../assets/images/star-wars-a-new-hope.webp');
+}
+.movie:nth-child(2) {
+    background-image: url('../assets/images/star-wars-the-empire-strikes-back.jpeg');
+}
+.movie:nth-child(3) {
+    background-image: url('../assets/images/star-wars-return-of-the-jedi.jpeg');
+}
+.movie:nth-child(4) {
+    background-image: url('../assets/images/star-wars-the-phantom-menace.webp');
+}
+.movie:nth-child(5) {
+    background-image: url('../assets/images/star-wars-attack-of-the-clones.webp');
+}
+.movie:nth-child(6) {
+    background-image: url('../assets/images/star-wars-revenge-of-the-sith.jpeg');
+}
+
 .movie {
     display: flex;
     position: relative;
     flex-direction: column;
+    align-items: flex-start;
     height: 400px;
     width: 300px;
-    padding: 1rem;
+    min-width: 250px;
+    padding: 1.5rem;
     margin: 1rem;
-    border: 1px solid pink;
-    background-image: url('starwars.jpeg');
+    border-radius: 10px;
+    transition: .2s;
+    background-repeat: no-repeat;
+    background-size: 350px 450px;
+    opacity: 0.8;
 }
 
-.movie-poster {
-    width: 140px;
-    height: 100px;
+.movie:hover {
+    transform: translateY(-.2rem);
+    opacity: 1;
+    /* border: 1px outset #fff679; */
 }
+
 
 main {
     height: 100vh;
