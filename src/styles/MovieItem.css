@@ -1,0 +1,61 @@
+.movie {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 400px;
+    width: 300px;
+    min-width: 250px;
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: 350px 450px;
+    background-color: #23232e;
+    opacity: 0.8;
+    color: #ffd53e;
+    transition: translateY .2s;
+    transition: background-position 1.5s ease-in-out;
+}
+
+.movie .movie-header, .movie .opening-crawl  {
+    opacity: 0;
+}
+
+.movie:hover  {
+    transform: translateY(-.2rem);
+    opacity: 0.9;
+}
+
+.movie-clicked {
+    background-position: 100vh;
+}
+
+.movie-clicked .movie-header, .movie-clicked .opening-crawl {
+    display: flex;
+    flex-direction: column;
+    opacity: 0.8;
+}
+
+.movie-more-info {
+    align-self: flex-start;
+}
+
+.movie:nth-child(1) {
+    background-image: url('../assets/images/star-wars-a-new-hope.webp');
+}
+.movie:nth-child(2) {
+    background-image: url('../assets/images/star-wars-the-empire-strikes-back.jpeg');
+}
+.movie:nth-child(3) {
+    background-image: url('../assets/images/star-wars-return-of-the-jedi.jpeg');
+}
+.movie:nth-child(4) {
+    background-image: url('../assets/images/star-wars-the-phantom-menace.webp');
+}
+.movie:nth-child(5) {
+    background-image: url('../assets/images/star-wars-attack-of-the-clones.webp');
+}
+.movie:nth-child(6) {
+    background-image: url('../assets/images/star-wars-revenge-of-the-sith.jpeg');
+}

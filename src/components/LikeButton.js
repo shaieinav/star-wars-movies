@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import HeartSVG from '../assets/svgs/HeartSVG';
+import '../styles/LikeButton.css';
 
 
 const LikeButton = ({ id }) => {
@@ -14,8 +15,13 @@ const LikeButton = ({ id }) => {
         localStorage.setItem('like' + id, like);
     }, [like]);
 
+    function onLikeButtonClick(e) {
+        e.stopPropagation();
+        setLike(!like);
+    }
+
     return (
-        <button className={like ? "like-button heart-like-button" : "like-button"} onClick={() => setLike(!like)}>
+        <button className={like ? "like-button heart-like-button" : "like-button opacity"} onClick={onLikeButtonClick}>
             <HeartSVG />
         </button>
     );

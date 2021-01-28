@@ -5,6 +5,7 @@ const StarWarsLogoSVG = () => {
             width="2500"
             height="1070"
             viewBox="0 0 634.105 271.365"
+            className="star-wars-svg"
         >
             <path
                 fill="#FFC500"

@@ -5,10 +5,11 @@ import LogoSVG from '../assets/svgs/LogoSVG';
 import SpaceStationMoonSVG from '../assets/svgs/SpaceStationMoonSVG';
 import StarfighterSVG from '../assets/svgs/StarfighterSVG';
 import GithubSVG from '../assets/svgs/GithubSVG';
+import '../styles/Navbar.css';
 
 const Navbar = () => {
     return (
-        <div className="nav">
+        <section className="nav">
             <Router>
                 <nav className="navbar">
                     <ul className="navbar-nav">
@@ -49,7 +50,7 @@ const Navbar = () => {
                     <Route exact path='/movies' component={MovieList} />
                 </Switch>
             </Router>
-        </div>
+        </section>
     );
 };
 

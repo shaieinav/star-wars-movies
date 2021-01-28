@@ -1,10 +1,14 @@
 import StarWarsLogoSVG from '../assets/svgs/StarWarsLogoSVG';
+import '../styles/Home.css';
 
 const Home = () => {
     return (
-        <main className="home">
+        <section className="home">
             <StarWarsLogoSVG />
-        </main>
+            <footer className="footer">
+                <h6 className="copyright">Shai Einav &#169; 2021</h6>
+            </footer>
+        </section>
     );
 };
 
