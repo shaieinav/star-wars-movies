@@ -13,17 +13,18 @@ const MovieList = () => {
             setMovies(response.data.results);
         }
         fetchMovies();
-    }, [setMovies]);
+    }, []);
 
-    const renderedList = movies.map((movie) => {
+    const renderedMoviesList = movies.map((movie) => {
+        const movieTitle = movie.title.replace(/\s+/g, '-').toLowerCase();
         return (
-            <MovieItem key={movie.episode_id} movie={movie} />
+            <MovieItem key={movie.episode_id} movie={movie} movieTitle={movieTitle} />
         );
     });
 
-    return ( 
+    return (
         <section className="movie-list">
-            {renderedList}
+            {renderedMoviesList}
         </section>
     );
 };

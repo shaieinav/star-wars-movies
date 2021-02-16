@@ -21,9 +21,9 @@ const LikeButton = ({ id }) => {
     }
 
     return (
-        <button className={like ? "like-button heart-like-button" : "like-button opacity"} onClick={onLikeButtonClick}>
+        <span className={like ? "like-button heart-like-button" : "like-button opacity"} onClick={onLikeButtonClick}>
             <HeartSVG />
-        </button>
+        </span>
     );
 };
   
