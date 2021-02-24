@@ -1,4 +1,130 @@
-.movie-data-text {
-  margin-left: 6rem;
+.movie-details {
+  display: grid;
+  /* margin-left: 6rem; */
   color: yellow;
+  padding: 2rem;
+  gap: 1rem;
+  grid-template-rows: 1fr 2fr;
+  grid-template-columns: 3fr 2fr;
+  grid-template-areas:
+    "title title"
+    "info description"
+    "characters description"
+    "planets description"
+    "species description"
+    "starships description"
+    "vehicles description";
+}
+
+.movie-details-title {
+  text-align: center;
+  font-size: 30px;
+}
+
+.movie-details-title {
+  grid-area: title;
+}
+
+.movie-info {
+  grid-area: info;
+}
+
+.movie-description {
+  grid-area: description;
+}
+
+.movie-characters {
+  grid-area: characters;
+}
+
+.movie-planets {
+  grid-area: planets;
+}
+
+.movie-species {
+  grid-area: species;
+}
+
+.movie-starships {
+  grid-area: starships;
+}
+
+.movie-vehicles {
+  grid-area: vehicles;
+}
+
+.content {
+  display: none;
+  padding: 0 20px;
+  opacity: 0;
+  transition: all 0.5s;
+  height: 0;
+  margin: 0;
+  margin-top: -10px;
+}
+
+.content.active {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  height: auto;
+  opacity: 1;
+  padding: 20px;
+}
+
+.details-card {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.details-card-header img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  opacity: 0.8;
+}
+
+li:hover {
+  opacity: 1;
+}
+
+.half-circle {
+  position: relative;
+  bottom: -14px;
+  left: -92px;
+  width: 104px;
+  height: 60px;
+  fill: none;
+  /* stroke: #ff8a00; */
+  stroke: #d15f02;
+  stroke-width: 8;
+  stroke-linecap: round;
+  pointer-events: none;
+}
+
+.details-card-img:hover {
+  cursor: pointer;
+}
+
+/* small screens */
+@media only screen and (max-width: 600px) {
+  .movie-details {
+    margin: 0;
+  }
+}
+
+/* large screens */
+@media only screen and (min-width: 601px) {
+  .movie-details {
+    margin-left: 6rem;
+  }
 }
